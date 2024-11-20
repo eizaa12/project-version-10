@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Havenly Home</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <img src="images/bg.jpg" alt="Background" class="background-image">
+    <div class="container">
+        <div class="overlay">
+            <h1 class="title">Create Your Account</h1>
+            <!-- Attach the function to the onsubmit event -->
+            <form class="form" action="database.php" method="POST" onsubmit="showSuccessMessage()">
+                <input type="text" placeholder="Full Name" required name="FullName">
+                <input type="email" placeholder="Email" required name="Email">
+                <input type="password" placeholder="Password" required name="Password">
+                <input type="password" placeholder="Confirm Password" required name="ConfirmPassword">
+                <select name="Role" required class="role-select">
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Customer">Customer</option>
+                    <option value="Supplier">Supplier</option>
+                </select>
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="login.html" class="login-link">Login</a></p>
+            <a href="index.html" class="back-btn">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

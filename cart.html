@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Add to Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<!-- Cart Icon with Counter -->
+<div class="cart">
+    <i class="cart-icon">🛒</i>
+    <span class="cart-count" id="cart-count">0</span>
+</div>
+
+<!-- Product List -->
+<div class="box">
+    <div class="box-image">
+        <img src="images/computer table.webp" alt="Computer Table">
+    </div>
+    <div class="title-price">
+        <h3>Computer Table</h3>
+        <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half'></i>
+        </div>
+        <span>$46</span>
+    </div>
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart-btn" onclick="addToCart()"> <i class='bx bx-cart'></i> Add to Cart</button>
+</div>
+
+        <div class="box">
+            <img src="product2.jpg" alt="Product 2">
+            <div class="title-price">
+                <h3>Product 2</h3>
+                <p>$29.99</p>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="box">
+            <img src="product3.jpg" alt="Product 3">
+            <div class="title-price">
+                <h3>Product 3</h3>
+                <p>$39.99</p>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function addToCart() {
+        var cartCount = document.getElementById('cart-count');
+        var currentCount = parseInt(cartCount.innerText);
+        cartCount.innerText = currentCount + 1;
+    }
+</script>
+
+</body>
+</html>
